@@ -164,16 +164,6 @@ resource "null_resource" "configure_server" {
 
 }
 
-module "dns" {
-  source = "./dns/cloudflare"
-
-  count      = "1"
-  email      = "${var.cloudflare_email}"
-  token      = "${var.cloudflare_token}"
-  domain     = "${var.domain}"
-  public_ip  = "${digitalocean_droplet.mattermost_server.ipv4_address}"
-  hostname   = "${digitalocean_droplet.mattermost_server.name}"
-}
 
 module "firewall" {
   source = "./security/ufw"
