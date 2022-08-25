@@ -7,15 +7,6 @@ variable "domain" {
   default = "example.com"
 }
 
-/* cloudflare */
-variable "cloudflare_email" {
-  default = ""
-}
-
-variable "cloudflare_token" {
-  default = ""
-}
-
 /* digitalocean */
 
 variable "digitalocean_ssh_keys" {
@@ -41,12 +32,12 @@ variable "region" {
 
 variable "image" {
   type    = string
-  default = "ubuntu-16-04-x64"
+  default = "ubuntu-20-04-x64"
 }
 
 variable "size" {
   type    = string
-  default = "1gb"
+  default = "s-2vcpu-4gb"
 }
 
 /* Database */
