@@ -25,27 +25,27 @@ variable "digitalocean_ssh_keys" {
 variable "token" {}
 
 variable "hostname_database" {
-  type = "string"
+  type = string
   default = "db"
 }
 
 variable "hostname_server" {
-  type = "string"
+  type = string
   default = "server"
 }
 
 variable "region" {
-  type    = "string"
+  type    = string
   default = "fra1"
 }
 
 variable "image" {
-  type    = "string"
+  type    = string
   default = "ubuntu-16-04-x64"
 }
 
 variable "size" {
-  type    = "string"
+  type    = string
   default = "1gb"
 }
 
