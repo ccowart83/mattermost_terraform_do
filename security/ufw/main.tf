@@ -1,17 +1,17 @@
 variable "connection_db" {
-  type = "string"
+  type = string
 }
 
 variable "connection_server" {
-  type = "string"
+  type = string
 }
 
 variable "private_interface_db" {
-  type = "string"
+  type = string
 }
 
 variable "private_interface_server" {
-  type = "string"
+  type = string
 }
 
 resource "null_resource" "firewall-db" {
