@@ -86,7 +86,7 @@ resource "digitalocean_droplet" "mattermost_server" {
   private_networking = true
   ssh_keys           = "${var.digitalocean_ssh_keys}"
 
-  count = 1
+  #count = 1
 
   provisioner "remote-exec" {
     inline = [
