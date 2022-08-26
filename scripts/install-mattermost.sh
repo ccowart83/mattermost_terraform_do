@@ -2,7 +2,7 @@
 set -e
 
 # Download the Mattermost Server.
-wget https://releases.mattermost.com/3.10.0/mattermost-3.10.0-linux-amd64.tar.gz
+wget https://releases.mattermost.com/7.2.0/mattermost-7.2.0-linux-amd64.tar.gz
 
 # Extract the Mattermost Server files.
 tar -xvzf mattermost*.gz
