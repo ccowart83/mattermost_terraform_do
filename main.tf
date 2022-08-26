@@ -1,10 +1,6 @@
 
 
 
-provider "digitalocean" {
-  token = "${var.token}"
-}
-
 resource "digitalocean_droplet" "mattermost_db" {
   name               = "${format(var.hostname_format, var.hostname_database)}"
   region             = "${var.region}"
