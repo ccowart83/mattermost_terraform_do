@@ -46,7 +46,7 @@ resource "digitalocean_droplet" "mattermost_db" {
 data "template_file" "mattermost_mysql_cf" {
   template = "${file("templates/my.cnf.tpl")}"
 
-  vars {
+  vars = {
     mattermost_db     = "${digitalocean_droplet.mattermost_db.ipv4_address}"
   }
 }
@@ -111,7 +111,7 @@ resource "digitalocean_droplet" "mattermost_server" {
 data "template_file" "mattermost_server_config" {
   template = "${file("templates/mattermost_config.json.tpl")}"
 
-  vars {
+  vars = {
     mattermost_db     = "${digitalocean_droplet.mattermost_db.ipv4_address}"
     mattermost_server = "${digitalocean_droplet.mattermost_server.ipv4_address}"
   }
@@ -120,7 +120,7 @@ data "template_file" "mattermost_server_config" {
 data "template_file" "mattermost_server_config_nginx" {
   template = "${file("templates/mattermost_nginx.tpl")}"
 
-  vars {
+  vars = {
     mattermost_server = "${digitalocean_droplet.mattermost_server.ipv4_address}"
   }
 }
