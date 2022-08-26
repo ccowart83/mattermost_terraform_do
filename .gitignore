@@ -1,2 +1,10 @@
 /terraform.tfstate
 /terraform.tfstate.backup
+.terraform/modules/modules.json
+.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.22.1/linux_amd64/CHANGELOG.md
+.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.22.1/linux_amd64/LICENSE
+.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.22.1/linux_amd64/README.md
+.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.22.1/linux_amd64/terraform-provider-digitalocean_v2.22.1
+.terraform/providers/registry.terraform.io/hashicorp/null/3.1.1/linux_amd64/terraform-provider-null_v3.1.1_x5
+.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/linux_amd64/terraform-provider-template_v2.2.0_x4
+.terraform.lock.hcl

@@ -35,7 +35,7 @@ EOF
 data "template_file" "ufw_db" {
   template = "${file("${path.module}/scripts/ufw_db.sh")}"
 
-  vars {
+  vars = {
     private_interface = "${var.private_interface_db}"
     mattermost_server = "${var.connection_server}"
   }
@@ -63,7 +63,7 @@ EOF
 data "template_file" "ufw_server" {
   template = "${file("${path.module}/scripts/ufw_server.sh")}"
 
-  vars {
+  vars = {
     private_interface = "${var.private_interface_server}"
     mattermost_db = "${var.connection_db}"
   }
