@@ -28,7 +28,9 @@ resource "digitalocean_droplet" "mattermost_db" {
   }
 
   provisioner "remote-exec" {
-    script = "scripts/mysql_secure_installation.sh"
+    inline = [
+      "scripts/mysql_secure_installation.sh" 
+      ]
   }
 
   provisioner "remote-exec" {
@@ -95,7 +97,9 @@ resource "digitalocean_droplet" "mattermost_server" {
   }
 
   provisioner "remote-exec" {
-    script = "scripts/install-mattermost.sh"
+    inline = [
+      "scripts/install-mattermost.sh"
+    ]
   }
 
   provisioner "file" {
