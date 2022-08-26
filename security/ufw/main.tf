@@ -26,9 +26,8 @@ resource "null_resource" "firewall-db" {
   }
 
   provisioner "remote-exec" {
-    inline = <<EOF
-${data.template_file.ufw_db.rendered}
-EOF
+    inline = "${data.template_file.ufw_db.rendered}"
+
   }
 }
 
@@ -54,9 +53,7 @@ resource "null_resource" "firewall-server" {
   }
 
   provisioner "remote-exec" {
-    inline = <<EOF
-${data.template_file.ufw_server.rendered}
-EOF
+    inline = "${data.template_file.ufw_server.rendered}"
   }
 }
 
